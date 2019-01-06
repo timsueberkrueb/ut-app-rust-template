@@ -23,13 +23,12 @@ fn main() {
     unsafe {
         cpp! { {
             #include <QtCore/QCoreApplication>
-            #include <QtQuickControls2/QQuickStyle>
         }}
         cpp!{[]{
              QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-             QQuickStyle::setStyle("Suru");
         }}
     }
+    QQuickStyle::set_style("Suru");
     qrc::load();
     qml_register_type::<Greeter>(cstr!("Greeter"), 1, 0, cstr!("Greeter"));
     let mut engine = QmlEngine::new();

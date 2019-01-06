@@ -6,8 +6,7 @@ edition = "2018"
 build = "src/build.rs"
 
 [dependencies]
-# FIXME: Use version from crates.io as soon as cross compilation supports lands in a release
-qmetaobject = { git = "https://github.com/woboq/qmetaobject-rs.git" }
+qmetaobject = "0.0.5"
 cstr = "0.1.0"
 cpp = "0.4"
 
