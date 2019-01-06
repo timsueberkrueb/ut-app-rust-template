@@ -1,0 +1,15 @@
+[package]
+name = "{{cookiecutter.app_name}}"
+version = "{{cookiecutter.version}}"
+authors = ["{{cookiecutter.maintainer_name}} <{{cookiecutter.maintainer_email}}"]
+edition = "2018"
+build = "src/build.rs"
+
+[dependencies]
+# FIXME: Use version from crates.io as soon as cross compilation supports lands in a release
+qmetaobject = { git = "https://github.com/woboq/qmetaobject-rs.git" }
+cstr = "0.1.0"
+cpp = "0.4"
+
+[build-dependencies]
+cpp_build = "0.4"
